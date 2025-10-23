@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: ca92aa5aec8e2a342917e86bc26e0151
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 288737
+  packageName: Ultimate Editor Enhancer
+  packageVersion: 4.5.1
+  assetPath: Assets/Plugins/Infinity Code/Ultimate Editor Enhancer/Scripts/Editor/References/BookmarkReferences.cs
+  uploadId: 783870

@@ -1,0 +1,24 @@
+{
+    "name": "QuantumTest",
+    "rootNamespace": "",
+    "references": [
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:8c4dd21966739024fbd72155091d199e",
+        "GUID:09dcc9c0126b6b34ab2a877b8f2277f5",
+        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:3ad9f430eaf6cb247a3894e187c4f601",
+        "GUID:831409e8f9d13b5479a3baef9822ad34",
+        "GUID:f6fa0c2f8b9a9f64897d3351666f3d66",
+        "GUID:5d82202959c2f144ea95e134645b6833"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: e64cd67fa6118e64ebda3989063d2946
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 288737
+  packageName: Ultimate Editor Enhancer
+  packageVersion: 4.5.1
+  assetPath: Assets/Plugins/Infinity Code/Ultimate Editor Enhancer/Scripts/Editor/ComponentHeaderItems/ComponentHeaderItem.cs
+  uploadId: 783870
