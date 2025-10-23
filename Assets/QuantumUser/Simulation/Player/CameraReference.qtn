@@ -1,0 +1,5 @@
+component CameraReference
+{
+    FPVector3 Forward;
+    FPVector3 Right;
+}

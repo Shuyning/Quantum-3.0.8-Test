@@ -73,19 +73,6 @@ namespace Quantum.Prototypes.Unity {
     }
   }
   [System.SerializableAttribute()]
-  public unsafe partial class AsteroidsProjectilePrototype : Quantum.QuantumUnityPrototypeAdapter<Quantum.Prototypes.AsteroidsProjectilePrototype> {
-    public FP TTL;
-    public Quantum.QuantumEntityPrototype Owner;
-    partial void ConvertUser(Quantum.QuantumEntityPrototypeConverter converter, ref Quantum.Prototypes.AsteroidsProjectilePrototype prototype);
-    public override Quantum.Prototypes.AsteroidsProjectilePrototype Convert(Quantum.QuantumEntityPrototypeConverter converter) {
-      var result = new Quantum.Prototypes.AsteroidsProjectilePrototype();
-      converter.Convert(this.TTL, out result.TTL);
-      converter.Convert(this.Owner, out result.Owner);
-      ConvertUser(converter, ref result);
-      return result;
-    }
-  }
-  [System.SerializableAttribute()]
   public unsafe partial class KCCPrototype : Quantum.QuantumUnityPrototypeAdapter<Quantum.Prototypes.KCCPrototype> {
     public AssetRef<KCCSettings> Settings;
     partial void ConvertUser(Quantum.QuantumEntityPrototypeConverter converter, ref Quantum.Prototypes.KCCPrototype prototype);
