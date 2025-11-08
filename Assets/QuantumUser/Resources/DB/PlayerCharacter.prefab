@@ -664,7 +664,7 @@ MonoBehaviour:
     CallbackFlags:
       Value: 0
   PhysicsBody:
-    IsEnabled: 1
+    IsEnabled: 0
     Config2D: 116
     Config3D: 58
     RotationFreeze: 0

@@ -21,7 +21,7 @@ MonoBehaviour:
   StepDepth:
     RawValue: 13107
   StepSpeed:
-    RawValue: 65536
+    RawValue: 6554
   MinPushBack:
     RawValue: 32768
   GroundCheckRadiusScale:

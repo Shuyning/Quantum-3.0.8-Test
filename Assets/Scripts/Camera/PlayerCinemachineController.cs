@@ -60,7 +60,7 @@ namespace QuantumTest
             _visualPitch = Mathf.Clamp(_visualPitch, minPitch, maxPitch);
 
             if (followRoot != null)
-                followRoot.rotation = Quaternion.Euler(_visualPitch, _visualYaw, 0f);
+                followRoot.rotation = Quaternion.Euler(_visualPitch, followRoot.rotation.eulerAngles.y, 0f);
         }
 
         private void SetActive(bool value)

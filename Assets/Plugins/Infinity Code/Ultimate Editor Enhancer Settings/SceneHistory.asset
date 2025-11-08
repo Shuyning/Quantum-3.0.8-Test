@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: SceneHistory
   m_EditorClassIdentifier: UltimateEditorEnhancer-Editor::InfinityCode.UltimateEditorEnhancer.References.SceneHistoryReferences
   _items:
-  - name: StartScene
-    path: Assets/Scenes/StartScene.unity
   - name: FirstLevelScene
     path: Assets/Scenes/FirstLevelScene.unity
+  - name: StartScene
+    path: Assets/Scenes/StartScene.unity
   - name: SecondLevelScene
     path: Assets/Scenes/SecondLevelScene.unity
   - name: QuantumSimpleConnectionScene 2
