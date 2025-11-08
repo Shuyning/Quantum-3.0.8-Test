@@ -1,4 +1,4 @@
-﻿namespace Quantum
+namespace Quantum
 {
     using System;
     using System.Collections.Generic;

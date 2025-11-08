@@ -11,7 +11,7 @@ namespace QuantumTest.Matchmaking
 {
     public class MatchmakingService : IMatchmakingService, ITickable, IInitializable, IDisposable
     {
-        private const byte MaxPlayers = 1;
+        private const byte MaxPlayers = 2;
 
         private readonly IEmitterPublish _emitter;
         private readonly ISceneLoadCoordinator _sceneLoader;

@@ -257,6 +257,12 @@ MonoBehaviour:
     SystemName: 
     StartDisabled: 0
     Children: []
+  - SystemType:
+      AssemblyQualifiedName: Quantum.PlayerAnimatorSystem, Quantum.Simulation, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    SystemName: 
+    StartDisabled: 0
+    Children: []
 --- !u!114 &8089222864167030895
 MonoBehaviour:
   m_ObjectHideFlags: 0

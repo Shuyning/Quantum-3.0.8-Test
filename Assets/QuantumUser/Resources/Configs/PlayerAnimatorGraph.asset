@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlayerAnimatorGraph
   m_EditorClassIdentifier: Quantum.Simulation::Quantum.AnimatorGraph
   Identifier:
-    Path: Resources/PlayerAnimatorGraph
+    Path: QuantumUser/Resources/Configs/PlayerAnimatorGraph
     Guid:
       Value: 370508037932931479
   Controller: {fileID: 9100000, guid: fae71d9c0e75f6e47b5f69078fa87639, type: 2}
@@ -52,8 +52,8 @@ MonoBehaviour:
         Offset:
           RawValue: 0
         ExitTime:
-          RawValue: 160563
-        HasExitTime: 1
+          RawValue: 0
+        HasExitTime: 0
         CanTransitionToSelf: 0
         Conditions:
         - VariableName: IsJump
@@ -88,8 +88,8 @@ MonoBehaviour:
         Offset:
           RawValue: 0
         ExitTime:
-          RawValue: 160563
-        HasExitTime: 1
+          RawValue: 0
+        HasExitTime: 0
         CanTransitionToSelf: 0
         Conditions:
         - VariableName: Locomotion
@@ -1847,8 +1847,8 @@ MonoBehaviour:
         Offset:
           RawValue: 0
         ExitTime:
-          RawValue: 38229
-        HasExitTime: 1
+          RawValue: 0
+        HasExitTime: 0
         CanTransitionToSelf: 0
         Conditions:
         - VariableName: Locomotion
@@ -1888,7 +1888,7 @@ MonoBehaviour:
         CanTransitionToSelf: 0
         Conditions:
         - VariableName: IsFall
-          Mode: 2
+          Mode: 1
           ThresholdFp:
             RawValue: 0
           ThresholdInt: 0
@@ -15986,7 +15986,7 @@ MonoBehaviour:
       - Index: 0
         Name: Land to Idle
         Duration:
-          RawValue: 16384
+          RawValue: 9830
         Offset:
           RawValue: 0
         ExitTime:
@@ -16009,7 +16009,7 @@ MonoBehaviour:
       - Index: 1
         Name: Land to Locomotion
         Duration:
-          RawValue: 16384
+          RawValue: 9830
         Offset:
           RawValue: 0
         ExitTime:
