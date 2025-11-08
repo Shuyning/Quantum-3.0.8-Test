@@ -1,0 +1,4 @@
+component KccJumpConfig 
+{
+    FP JumpHeight;
+}

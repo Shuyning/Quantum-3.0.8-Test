@@ -1,0 +1,7 @@
+[ExcludeFromPrototype]
+struct KccPlayerInput {
+    FPVector2 MoveDirection;
+    FP Pitch;
+    FP Yaw;
+    button Jump;
+}

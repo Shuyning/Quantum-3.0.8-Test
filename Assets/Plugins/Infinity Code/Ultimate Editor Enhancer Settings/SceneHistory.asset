@@ -13,19 +13,19 @@ MonoBehaviour:
   m_Name: SceneHistory
   m_EditorClassIdentifier: UltimateEditorEnhancer-Editor::InfinityCode.UltimateEditorEnhancer.References.SceneHistoryReferences
   _items:
+  - name: StartScene
+    path: Assets/Scenes/StartScene.unity
+  - name: FirstLevelScene
+    path: Assets/Scenes/FirstLevelScene.unity
+  - name: SecondLevelScene
+    path: Assets/Scenes/SecondLevelScene.unity
   - name: QuantumSimpleConnectionScene 2
     path: Assets/QuantumUser/Scenes/QuantumSimpleConnectionScene 2.unity
   - name: QuantumSimpleConnectionScene 1
     path: Assets/QuantumUser/Scenes/QuantumSimpleConnectionScene 1.unity
   - name: QuantumSimpleConnectionScene
     path: Assets/QuantumUser/Scenes/QuantumSimpleConnectionScene.unity
-  - name: FirstLevelScene
-    path: Assets/Scenes/FirstLevelScene.unity
   - name: QuantumSampleMenu
     path: Assets/Plugins/Photon/QuantumMenu/QuantumSampleMenu.unity
-  - name: SecondLevelScene
-    path: Assets/Scenes/SecondLevelScene.unity
   - name: AsteroidsGameplay
     path: Assets/Photon/QuantumAsteroids/Scenes/AsteroidsGameplay.unity
-  - name: StartScene
-    path: Assets/Scenes/StartScene.unity

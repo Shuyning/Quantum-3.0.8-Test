@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6264929867639979454}
   - component: {fileID: 4607778770375802591}
+  - component: {fileID: -4673719216657964720}
   m_Layer: 0
   m_Name: ProjectContext
   m_TagString: Untagged
@@ -45,7 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Zenject::Zenject.ProjectContext
   _scriptableObjectInstallers: []
-  _monoInstallers: []
+  _monoInstallers:
+  - {fileID: -4673719216657964720}
   _installerPrefabs: []
   _parentNewObjectsUnderContext: 1
   _editorReflectionBakingCoverageMode: 0
@@ -60,3 +62,17 @@ MonoBehaviour:
       _missingHandlerDefaultResponse: 2
       _requireStrictUnsubscribe: 0
       _defaultAsyncTickPriority: 1
+--- !u!114 &-4673719216657964720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7114371709638130773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 242f95fc96cb421c96635d980bd0c991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: QuantumTest::Installers.ProjectInstaller
+  playerAvatarSettings: {fileID: 11400000, guid: 75186208e38fccc4b94e62933be8b57f, type: 2}
+  gameMapsConfig: {fileID: 11400000, guid: 9caac6cb760c03a439050661912ebc40, type: 2}

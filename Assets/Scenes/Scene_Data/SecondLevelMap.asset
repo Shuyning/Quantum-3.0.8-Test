@@ -19,8 +19,8 @@ MonoBehaviour:
   UserAsset:
     Id:
       Value: 0
-  Scene: NewQuantumGameScene
-  ScenePath: Assets/Scenes/NewQuantumGameScene.unity
+  Scene: SecondLevelScene
+  ScenePath: Assets/Scenes/SecondLevelScene.unity
   SceneGuid: ffd422772d203454b97a38dd7d6fb90d
   WorldSize: 256
   BucketsCount: 16

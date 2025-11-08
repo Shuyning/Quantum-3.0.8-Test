@@ -1,0 +1,4 @@
+component SpawnPoint 
+{
+    int Order;
+}

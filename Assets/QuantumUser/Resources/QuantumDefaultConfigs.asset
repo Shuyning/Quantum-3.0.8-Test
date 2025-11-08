@@ -240,6 +240,18 @@ MonoBehaviour:
     StartDisabled: 0
     Children: []
   - SystemType:
+      AssemblyQualifiedName: Quantum.GameplaySpawnSystem, Quantum.Simulation, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    SystemName: 
+    StartDisabled: 0
+    Children: []
+  - SystemType:
+      AssemblyQualifiedName: Quantum.KccPlayerInputSystem, Quantum.Simulation, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    SystemName: 
+    StartDisabled: 0
+    Children: []
+  - SystemType:
       AssemblyQualifiedName: Quantum.KCCSystem, Quantum.Simulation, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     SystemName: 
