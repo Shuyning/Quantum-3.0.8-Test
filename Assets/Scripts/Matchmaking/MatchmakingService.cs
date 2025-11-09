@@ -173,7 +173,7 @@ namespace QuantumTest.Matchmaking
                 if (!QuantumUnityDB.TryGetGlobalAsset(runtimeConfig.Map, out Map map))
                     return;
 
-                await _sceneLoader.LoadGameSceneAsync(map.Scene);
+                await _sceneLoader.LoadMapAsync(map);
 
                 await UniTask.WaitUntil(() => _runner.Session.IsRunning);
 

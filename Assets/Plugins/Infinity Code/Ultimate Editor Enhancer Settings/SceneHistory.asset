@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: SceneHistory
   m_EditorClassIdentifier: UltimateEditorEnhancer-Editor::InfinityCode.UltimateEditorEnhancer.References.SceneHistoryReferences
   _items:
-  - name: SecondLevelScene
-    path: Assets/Scenes/SecondLevelScene.unity
-  - name: QuantumSampleMenu
-    path: Assets/Scenes/QuantumSampleMenu.unity
-  - name: FirstLevelScene
-    path: Assets/Scenes/FirstLevelScene.unity
   - name: StartScene
     path: Assets/Scenes/StartScene.unity
+  - name: QuantumSampleMenu
+    path: Assets/Scenes/QuantumSampleMenu.unity
+  - name: SecondLevelScene
+    path: Assets/Scenes/SecondLevelScene.unity
+  - name: FirstLevelScene
+    path: Assets/Scenes/FirstLevelScene.unity
   - name: QuantumSampleMenu
     path: Assets/Plugins/Photon/QuantumMenu/QuantumSampleMenu.unity
   - name: AsteroidsGameplay
