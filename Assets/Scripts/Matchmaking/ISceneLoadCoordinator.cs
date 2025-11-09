@@ -1,5 +1,4 @@
 using Cysharp.Threading.Tasks;
-using Photon.Realtime;
 using Quantum;
 using QuantumTest.Scenes;
 
@@ -7,7 +6,8 @@ namespace QuantumTest.Matchmaking
 {
     public interface ISceneLoadCoordinator
     {
-        public UniTask LoadGameForAllAsync(RuntimeConfig runtimeConfig, RealtimeClient client);
-        public UniTask LoadLocalAsync(SceneId sceneId);
+        UniTask LoadGameSceneAsync(string sceneName);
+        UniTask LoadLocalAsync(SceneId sceneId);
+        UniTask LoadMapAsync(AssetRef<Map> mapRef);
     }
 }

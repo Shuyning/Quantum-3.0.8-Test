@@ -7,49 +7,62 @@ namespace Quantum
     {
         void ISignalOnPlayerAdded.OnPlayerAdded(Frame frame, PlayerRef playerRef, bool firstTime)
         {
-            var runtimePlayer = frame.GetPlayerData(playerRef);
-            var playerEntity = frame.Create(runtimePlayer.PlayerAvatar);
+            if (!firstTime)
+                return;
+
+            var playerEntity = CreatePlayer(frame, playerRef);
+            PlacePlayerOnSpawnPosition(frame, playerEntity);
+        }
+
+        private EntityRef CreatePlayer(Frame frame, PlayerRef playerRef)
+        {
+            var playerData = frame.GetPlayerData(playerRef);
+            var playerEntity = frame.Create(playerData.PlayerAvatar);
 
             if (frame.Unsafe.TryGetPointer<PlayerController>(playerEntity, out var playerController))
             {
                 playerController->PlayerRef = playerRef;
             }
 
-            var playerControllerEntity = GetPlayerEntity(frame, playerRef);
-            if (playerControllerEntity == EntityRef.None)
+            return playerEntity;
+        }
+
+        private void PlacePlayerOnSpawnPosition(Frame frame, EntityRef playerEntity)
+        {
+            if (playerEntity == EntityRef.None)
                 return;
 
             int desiredOrder = 0;
-            var pcFilter = frame.Filter<PlayerController>();
+            var playerFilter = frame.Filter<PlayerController>();
             int existingPlayers = 0;
-            while (pcFilter.NextUnsafe(out _, out _)) 
+            while (playerFilter.NextUnsafe(out _, out _)) 
                 existingPlayers++;
             
             desiredOrder = existingPlayers - 1;
             if (desiredOrder < 0) desiredOrder = 0;
 
             Transform3D* chosenSpawn = null;
-            var spFilter = frame.Filter<SpawnPoint, Transform3D>();
-            while (spFilter.NextUnsafe(out _, out var sp, out var tr))
+            var spawnPointFilter = frame.Filter<SpawnPoint, Transform3D>();
+            while (spawnPointFilter.NextUnsafe(out _, out var spawnPoint, out var transform))
             {
-                if (sp->Order == desiredOrder)
+                if (spawnPoint->Order == desiredOrder)
                 {
-                    chosenSpawn = tr;
+                    chosenSpawn = transform;
                     break;
                 }
             }
 
             if (chosenSpawn == null)
             {
-                var spAny = frame.Filter<SpawnPoint, Transform3D>();
-                if (spAny.NextUnsafe(out _, out _, out var trAny))
+                var spawnPoint = frame.Filter<SpawnPoint, Transform3D>();
+                if (spawnPoint.NextUnsafe(out _, out _, out var trAny))
                     chosenSpawn = trAny;
             }
 
-            if (chosenSpawn != null && frame.Unsafe.TryGetPointer<Transform3D>(playerControllerEntity, out var t))
+            if (chosenSpawn != null && frame.Unsafe.TryGetPointer<Transform3D>(playerEntity, out var transform3D))
             {
-                t->Position = chosenSpawn->Position;
-                t->Rotation = chosenSpawn->Rotation;
+                transform3D->Position = chosenSpawn->Position;
+                transform3D->Rotation = chosenSpawn->Rotation;
             }
         }
 

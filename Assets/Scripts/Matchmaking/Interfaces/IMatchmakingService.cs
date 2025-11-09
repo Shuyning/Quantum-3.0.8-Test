@@ -1,10 +1,11 @@
 using Cysharp.Threading.Tasks;
+using Quantum;
 
 namespace QuantumTest.Matchmaking
 {
     public interface IMatchmakingService
     {
-        public UniTask StartQuickMatchAsync();
-        public UniTask LeaveToMenuAsync();
+        UniTask StartQuickMatchAsync();
+        UniTask LeaveToMenuAsync();
     }
 }

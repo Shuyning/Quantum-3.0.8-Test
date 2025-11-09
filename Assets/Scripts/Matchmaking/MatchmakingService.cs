@@ -1,6 +1,7 @@
 using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using Photon.Deterministic;
 using Photon.Realtime;
 using Quantum;
 using QuantumTest.Config;
@@ -21,6 +22,7 @@ namespace QuantumTest.Matchmaking
         private CancellationTokenSource _cts;
         private IDisposable _playerCountListener;
         private bool _gameStarted;
+        private QuantumRunner _runner;
 
         [Inject]
         public MatchmakingService(IEmitterPublish emitter, ISceneLoadCoordinator sceneLoader, GameMapsConfig mapsConfig)
@@ -152,7 +154,35 @@ namespace QuantumTest.Matchmaking
                     Seed = 0
                 };
 
-                await _sceneLoader.LoadGameForAllAsync(runtimeConfig, _client);
+                var args = new SessionRunner.Arguments
+                {
+                    RunnerFactory = QuantumRunnerUnityFactory.DefaultFactory,
+                    GameParameters = QuantumRunnerUnityFactory.CreateGameParameters,
+                    ClientId = _client.UserId ?? System.Guid.NewGuid().ToString(),
+                    RuntimeConfig = runtimeConfig,
+                    SessionConfig = QuantumDeterministicSessionConfigAsset.Global.Config,
+                    GameMode = DeterministicGameMode.Multiplayer,
+                    PlayerCount = _client.CurrentRoom.MaxPlayers,
+                    Communicator = new QuantumNetworkCommunicator(_client),
+                    DeltaTimeType = SimulationUpdateTime.Default,
+                    StartGameTimeoutInSeconds = 10
+                };
+
+                _runner = (QuantumRunner)await SessionRunner.StartAsync(args);
+
+                if (!QuantumUnityDB.TryGetGlobalAsset(runtimeConfig.Map, out Map map))
+                    return;
+
+                await _sceneLoader.LoadGameSceneAsync(map.Scene);
+
+                await UniTask.WaitUntil(() => _runner.Session.IsRunning);
+
+                var localPlayerData = new RuntimePlayer
+                {
+                    PlayerAvatar = _mapsConfig.PlayerPrototype
+                };
+                
+                _runner.Game.AddPlayer(localPlayerData);
             }
             catch (Exception e)
             {

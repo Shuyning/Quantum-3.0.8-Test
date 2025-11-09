@@ -10,5 +10,6 @@ namespace QuantumTest.Config
         public AssetRef<Map> SecondLevelMap;
         public AssetRef<SimulationConfig> SimulationConfig;
         public AssetRef<SystemsConfig> SystemsConfig;
+        public AssetRef<EntityPrototype> PlayerPrototype;
     }
 }

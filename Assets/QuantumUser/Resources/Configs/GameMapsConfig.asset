@@ -24,3 +24,6 @@ MonoBehaviour:
   SystemsConfig:
     Id:
       Value: 986206872287085584
+  PlayerPrototype:
+    Id:
+      Value: 1532718965583539965
