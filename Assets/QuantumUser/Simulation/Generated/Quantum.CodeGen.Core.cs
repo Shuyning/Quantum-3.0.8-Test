@@ -1634,6 +1634,24 @@ namespace Quantum {
     }
   }
   [StructLayout(LayoutKind.Explicit)]
+  public unsafe partial struct NextLevelTrigger : Quantum.IComponent {
+    public const Int32 SIZE = 8;
+    public const Int32 ALIGNMENT = 8;
+    [FieldOffset(0)]
+    public AssetRef<Map> NextLevelMap;
+    public override readonly Int32 GetHashCode() {
+      unchecked { 
+        var hash = 19801;
+        hash = hash * 31 + NextLevelMap.GetHashCode();
+        return hash;
+      }
+    }
+    public static void Serialize(void* ptr, FrameSerializer serializer) {
+        var p = (NextLevelTrigger*)ptr;
+        AssetRef.Serialize(&p->NextLevelMap, serializer);
+    }
+  }
+  [StructLayout(LayoutKind.Explicit)]
   public unsafe partial struct PlayerController : Quantum.IComponent {
     public const Int32 SIZE = 4;
     public const Int32 ALIGNMENT = 4;
@@ -1733,6 +1751,8 @@ namespace Quantum {
       BuildSignalsArrayOnComponentRemoved<NavMeshPathfinder>();
       BuildSignalsArrayOnComponentAdded<NavMeshSteeringAgent>();
       BuildSignalsArrayOnComponentRemoved<NavMeshSteeringAgent>();
+      BuildSignalsArrayOnComponentAdded<Quantum.NextLevelTrigger>();
+      BuildSignalsArrayOnComponentRemoved<Quantum.NextLevelTrigger>();
       BuildSignalsArrayOnComponentAdded<PhysicsBody2D>();
       BuildSignalsArrayOnComponentRemoved<PhysicsBody2D>();
       BuildSignalsArrayOnComponentAdded<PhysicsBody3D>();
@@ -1930,6 +1950,7 @@ namespace Quantum {
       typeRegistry.Register(typeof(NavMeshPathfinder), NavMeshPathfinder.SIZE);
       typeRegistry.Register(typeof(NavMeshRegionMask), NavMeshRegionMask.SIZE);
       typeRegistry.Register(typeof(NavMeshSteeringAgent), NavMeshSteeringAgent.SIZE);
+      typeRegistry.Register(typeof(Quantum.NextLevelTrigger), Quantum.NextLevelTrigger.SIZE);
       typeRegistry.Register(typeof(NullableFP), NullableFP.SIZE);
       typeRegistry.Register(typeof(NullableFPVector2), NullableFPVector2.SIZE);
       typeRegistry.Register(typeof(NullableFPVector3), NullableFPVector3.SIZE);
@@ -1970,12 +1991,13 @@ namespace Quantum {
       typeRegistry.Register(typeof(Quantum._globals_), Quantum._globals_.SIZE);
     }
     static partial void InitComponentTypeIdGen() {
-      ComponentTypeId.Reset(ComponentTypeId.BuiltInComponentCount + 6)
+      ComponentTypeId.Reset(ComponentTypeId.BuiltInComponentCount + 7)
         .AddBuiltInComponents()
         .Add<Quantum.AnimatorComponent>(Quantum.AnimatorComponent.Serialize, null, Quantum.AnimatorComponent.OnRemoved, ComponentFlags.None)
         .Add<Quantum.KCC>(Quantum.KCC.Serialize, null, Quantum.KCC.OnRemoved, ComponentFlags.None)
         .Add<Quantum.KCCProcessorLink>(Quantum.KCCProcessorLink.Serialize, null, null, ComponentFlags.None)
         .Add<Quantum.KccJumpConfig>(Quantum.KccJumpConfig.Serialize, null, null, ComponentFlags.None)
+        .Add<Quantum.NextLevelTrigger>(Quantum.NextLevelTrigger.Serialize, null, null, ComponentFlags.None)
         .Add<Quantum.PlayerController>(Quantum.PlayerController.Serialize, null, null, ComponentFlags.None)
         .Add<Quantum.SpawnPoint>(Quantum.SpawnPoint.Serialize, null, null, ComponentFlags.None)
         .Finish();

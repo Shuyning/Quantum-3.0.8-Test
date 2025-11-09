@@ -519,6 +519,7 @@ MonoBehaviour:
   - {fileID: 1232634727}
   - {fileID: 1177897368}
   MapEntityReferences:
+  - {fileID: 1528481835}
   - {fileID: 0}
   - {fileID: 0}
   Asset: {fileID: 0}
@@ -1521,6 +1522,7 @@ Transform:
   - {fileID: 1461598835}
   - {fileID: 537109168}
   - {fileID: 1177897362}
+  - {fileID: 1528481834}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1461598834
@@ -1558,6 +1560,342 @@ Transform:
   - {fileID: 1697565849}
   m_Father: {fileID: 1359630281}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1528481833
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1528481834}
+  - component: {fileID: 1528481836}
+  - component: {fileID: 1528481835}
+  - component: {fileID: 1528481837}
+  - component: {fileID: 1528481838}
+  m_Layer: 0
+  m_Name: NextLevelTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1528481834
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528481833}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.95, z: 46.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1359630281}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1528481835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528481833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0008c51fe3af00b4da5d44f02d9b3dff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Quantum.Unity::Quantum.QuantumEntityView
+  BindBehaviour: 1
+  ManualDisposal: 0
+  ViewFlags: 0
+  InterpolationMode: 0
+  ErrorCorrectionRateMin: 3.3
+  ErrorCorrectionRateMax: 10
+  ErrorPositionBlendStart: 0.25
+  ErrorPositionBlendEnd: 1
+  ErrorRotationBlendStart: 0.1
+  ErrorRotationBlendEnd: 0.5
+  ErrorPositionMinCorrection: 0.025
+  ErrorPositionTeleportDistance: 2
+  ErrorRotationTeleportDistance: 0.5
+  OnEntityInstantiated:
+    m_PersistentCalls:
+      m_Calls: []
+  OnEntityDestroyed:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1528481836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528481833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 836dcb7e0f6259748b850a10912ce727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Quantum.Unity::Quantum.QuantumEntityPrototype
+  TransformMode: 1
+  Transform2DVertical:
+    IsEnabled: 0
+    Height:
+      RawValue: 0
+    PositionOffset:
+      RawValue: 0
+  PhysicsCollider:
+    IsEnabled: 1
+    IsTrigger: 1
+    Material:
+      Id:
+        Value: 0
+    SourceCollider: {fileID: 1528481837}
+    SourceShapeSettings:
+      IsScaledBySource: 1
+      CapsuleDirection2D: 0
+      CapsuleDirection3D: 0
+    Shape2D:
+      ShapeType: 0
+      PolygonCollider:
+        Id:
+          Value: 0
+      CircleRadius:
+        RawValue: 32768
+      CapsuleSize:
+        X:
+          RawValue: 65536
+        Y:
+          RawValue: 131072
+      EdgeExtent:
+        RawValue: 32768
+      BoxExtents:
+        X:
+          RawValue: 32768
+        Y:
+          RawValue: 32768
+      PositionOffset:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+      RotationOffset:
+        RawValue: 0
+      UserTag: 0
+      IsPersistent: 1
+      CompoundShapes: []
+    Shape3D:
+      ShapeType: 2
+      SphereRadius:
+        RawValue: 32768
+      CapsuleRadius:
+        RawValue: 32768
+      CapsuleHeight:
+        RawValue: 131072
+      PositionOffset:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 294912
+        Y:
+          RawValue: 163840
+        Z:
+          RawValue: 32768
+      RotationOffset:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      UserTag: 0
+      IsPersistent: 1
+      CompoundShapes: []
+    LayerSource: 0
+    Layer: 0
+    CallbackFlags:
+      Value: 128
+  PhysicsBody:
+    IsEnabled: 0
+    Config2D: 116
+    Config3D: 58
+    RotationFreeze: 0
+    InertiaMode: 0
+    Mass:
+      RawValue: 65536
+    Drag:
+      RawValue: 32768
+    AngularDrag:
+      RawValue: 32768
+    ExplicitInertia2D:
+      RawValue: 65536
+    ExplicitInertia3D:
+      X:
+        RawValue: 65536
+      Y:
+        RawValue: 65536
+      Z:
+        RawValue: 65536
+    CenterOfMass2D:
+      X:
+        RawValue: 0
+      Y:
+        RawValue: 0
+    CenterOfMass3D:
+      X:
+        RawValue: 0
+      Y:
+        RawValue: 0
+      Z:
+        RawValue: 0
+    ParametricInertiaShape2D:
+      ShapeType: 0
+      PolygonCollider:
+        Id:
+          Value: 0
+      CircleRadius:
+        RawValue: 32768
+      CapsuleSize:
+        X:
+          RawValue: 65536
+        Y:
+          RawValue: 131072
+      EdgeExtent:
+        RawValue: 32768
+      BoxExtents:
+        X:
+          RawValue: 32768
+        Y:
+          RawValue: 32768
+      PositionOffset:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+      RotationOffset:
+        RawValue: 0
+      UserTag: 0
+      IsPersistent: 1
+      CompoundShapes: []
+    ParametricInertiaShape3D:
+      ShapeType: 0
+      SphereRadius:
+        RawValue: 32768
+      CapsuleRadius:
+        RawValue: 32768
+      CapsuleHeight:
+        RawValue: 131072
+      PositionOffset:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 32768
+        Y:
+          RawValue: 32768
+        Z:
+          RawValue: 32768
+      RotationOffset:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      UserTag: 0
+      IsPersistent: 1
+      CompoundShapes: []
+    InertiaScale:
+      _hasValue: 0
+      _value:
+        RawValue: 65536
+    GravityScale:
+      _hasValue: 0
+      _value:
+        RawValue: 65536
+  NavMeshPathfinder:
+    IsEnabled: 0
+    NavMeshAgentConfig:
+      Id:
+        Value: 0
+    InitialTarget:
+      IsEnabled: 0
+      Target: {fileID: 0}
+      Position:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      NavMesh:
+        Reference: {fileID: 0}
+        Asset:
+          Id:
+            Value: 0
+        Name: 
+  NavMeshSteeringAgent:
+    IsEnabled: 0
+    MaxSpeed:
+      IsEnabled: 0
+      Value:
+        RawValue: 0
+    Acceleration:
+      IsEnabled: 0
+      Value:
+        RawValue: 0
+  NavMeshAvoidanceAgent:
+    IsEnabled: 0
+  View:
+    Id:
+      Value: 0
+--- !u!65 &1528481837
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528481833}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 9, y: 5, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1528481838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528481833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 641b6c30ab12d3743ad09806196efaad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Quantum.Unity::Quantum.QPrototypeNextLevelTrigger
+  Prototype:
+    NextLevelMap:
+      Id:
+        Value: 500520909101285817
 --- !u!1 &1555772200
 GameObject:
   m_ObjectHideFlags: 0

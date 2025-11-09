@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8f98ff78397bdc4a9886959982c466e, type: 3}
   m_Name: QuantumMenuConfig
   m_EditorClassIdentifier: 
-  _maxPlayers: 6
+  _maxPlayers: 2
   _adaptFramerateForMobilePlatform: 1
   _availableAppVersions:
   - 3.0
@@ -29,7 +29,35 @@ MonoBehaviour:
   - kr
   - us
   - usw
-  _availableScenes: []
+  _availableScenes:
+  - Name: FirstLevelScene
+    ScenePath: Assets/Scenes/FirstLevelScene.unity
+    Preview: {fileID: 0}
+    RuntimeConfig:
+      Seed: 0
+      Map:
+        Id:
+          Value: 501173511538832630
+      SimulationConfig:
+        Id:
+          Value: 1075613406875361741
+      SystemsConfig:
+        Id:
+          Value: 986206872287085584
+  - Name: SecondLevelScene
+    ScenePath: Assets/Scenes/SecondLevelScene.unity
+    Preview: {fileID: 0}
+    RuntimeConfig:
+      Seed: 0
+      Map:
+        Id:
+          Value: 500520909101285817
+      SimulationConfig:
+        Id:
+          Value: 1075613406875361741
+      SystemsConfig:
+        Id:
+          Value: 986206872287085584
   _machineId: {fileID: -755480892457977500, guid: fbd1d0c57fd428c44b08e505acb8d851, type: 3}
   _codeGenerator: {fileID: 11400000, guid: e38f1fac5a1a5c94da2b4ef21bd48419, type: 2}
   DefaultScenePreview: {fileID: 21300000, guid: e43d4c530865a8342957f23fe8a873b2, type: 3}

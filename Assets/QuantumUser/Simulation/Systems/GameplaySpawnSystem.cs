@@ -17,12 +17,11 @@ namespace Quantum
         private EntityRef CreatePlayer(Frame frame, PlayerRef playerRef)
         {
             var playerData = frame.GetPlayerData(playerRef);
-            var playerEntity = frame.Create(playerData.PlayerAvatar);
-
-            if (frame.Unsafe.TryGetPointer<PlayerController>(playerEntity, out var playerController))
-            {
-                playerController->PlayerRef = playerRef;
-            }
+            var entityPrototype = frame.FindAsset<EntityPrototype>(playerData.PlayerAvatar);
+            var playerEntity = frame.Create(entityPrototype);
+            
+            frame.AddOrGet<PlayerController>(playerEntity, out var playerController);
+            playerController->PlayerRef = playerRef;
 
             return playerEntity;
         }
@@ -39,7 +38,8 @@ namespace Quantum
                 existingPlayers++;
             
             desiredOrder = existingPlayers - 1;
-            if (desiredOrder < 0) desiredOrder = 0;
+            if (desiredOrder < 0)
+                desiredOrder = 0;
 
             Transform3D* chosenSpawn = null;
             var spawnPointFilter = frame.Filter<SpawnPoint, Transform3D>();

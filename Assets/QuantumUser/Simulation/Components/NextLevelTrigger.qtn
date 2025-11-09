@@ -1,0 +1,4 @@
+component NextLevelTrigger
+{
+    asset_ref<Map> NextLevelMap;
+}

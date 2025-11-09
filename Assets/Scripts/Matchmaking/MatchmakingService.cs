@@ -182,7 +182,7 @@ namespace QuantumTest.Matchmaking
                     PlayerAvatar = _mapsConfig.PlayerPrototype
                 };
                 
-                _runner.Game.AddPlayer(localPlayerData);
+                _runner.Game.AddPlayer(0, localPlayerData);
             }
             catch (Exception e)
             {

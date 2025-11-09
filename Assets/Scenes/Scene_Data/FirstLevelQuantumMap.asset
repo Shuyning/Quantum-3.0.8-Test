@@ -395,6 +395,11 @@ MonoBehaviour:
       MutableMode: 0
   MapEntities:
   - Components:
+    - rid: 2714664582294536192
+    - rid: 2714664582294536193
+    - rid: 2714664582294536194
+    - rid: 2714664582294536195
+  - Components:
     - rid: 8202565085630038016
     - rid: 8202565085630038017
   - Components:
@@ -404,6 +409,74 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+    - rid: 2714664582294536192
+      type: {class: Transform3DPrototype, ns: Quantum.Prototypes, asm: Quantum.Engine}
+      data:
+        Position:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 193331
+          Z:
+            RawValue: 3067084
+        Rotation:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+    - rid: 2714664582294536193
+      type: {class: PhysicsCollider3DPrototype, ns: Quantum.Prototypes, asm: Quantum.Engine}
+      data:
+        ShapeConfig:
+          ShapeType: 2
+          SphereRadius:
+            RawValue: 32768
+          CapsuleRadius:
+            RawValue: 32768
+          CapsuleHeight:
+            RawValue: 131072
+          PositionOffset:
+            X:
+              RawValue: 0
+            Y:
+              RawValue: 0
+            Z:
+              RawValue: 0
+          BoxExtents:
+            X:
+              RawValue: 294912
+            Y:
+              RawValue: 163840
+            Z:
+              RawValue: 32768
+          RotationOffset:
+            X:
+              RawValue: 0
+            Y:
+              RawValue: 0
+            Z:
+              RawValue: 0
+          UserTag: 0
+          IsPersistent: 1
+          CompoundShapes: []
+        Layer: 0
+        IsTrigger: 1
+        PhysicsMaterial:
+          Id:
+            Value: 0
+    - rid: 2714664582294536194
+      type: {class: PhysicsCallbacks3DPrototype, ns: Quantum.Prototypes, asm: Quantum.Engine}
+      data:
+        CallbackFlags:
+          Value: 128
+    - rid: 2714664582294536195
+      type: {class: NextLevelTriggerPrototype, ns: Quantum.Prototypes, asm: Quantum.Simulation}
+      data:
+        NextLevelMap:
+          Id:
+            Value: 500520909101285817
     - rid: 7932604735851331584
       type: {class: Transform3DPrototype, ns: Quantum.Prototypes, asm: Quantum.Engine}
       data:
