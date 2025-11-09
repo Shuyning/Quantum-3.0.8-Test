@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80aae7b9e570d1443b33bdf7ba37e747, type: 3}
+  m_Name: PushObjectsProcessor
+  m_EditorClassIdentifier: Quantum.Simulation::Quantum.PushObjectsProcessor
+  Identifier:
+    Path: Photon/QuantumAddons/KCC/AssetDB/Processors/PushObjectsProcessor
+    Guid:
+      Value: 358864311794490359
+  PushStrength:
+    RawValue: 65536
+  VerticalDamp:
+    RawValue: 6554

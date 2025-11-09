@@ -432,11 +432,11 @@ MonoBehaviour:
         ShapeConfig:
           ShapeType: 2
           SphereRadius:
-            RawValue: 32768
+            RawValue: 36045
           CapsuleRadius:
-            RawValue: 32768
+            RawValue: 36045
           CapsuleHeight:
-            RawValue: 131072
+            RawValue: 144180
           PositionOffset:
             X:
               RawValue: 0
@@ -446,11 +446,11 @@ MonoBehaviour:
               RawValue: 0
           BoxExtents:
             X:
-              RawValue: 32768
+              RawValue: 36045
             Y:
-              RawValue: 32768
+              RawValue: 36045
             Z:
-              RawValue: 32768
+              RawValue: 36045
           RotationOffset:
             X:
               RawValue: 0
@@ -505,11 +505,11 @@ MonoBehaviour:
         ParametricInertiaShape:
           ShapeType: 0
           SphereRadius:
-            RawValue: 32768
+            RawValue: 36045
           CapsuleRadius:
-            RawValue: 32768
+            RawValue: 36045
           CapsuleHeight:
-            RawValue: 131072
+            RawValue: 144180
           PositionOffset:
             X:
               RawValue: 0
@@ -519,11 +519,11 @@ MonoBehaviour:
               RawValue: 0
           BoxExtents:
             X:
-              RawValue: 32768
+              RawValue: 36045
             Y:
-              RawValue: 32768
+              RawValue: 36045
             Z:
-              RawValue: 32768
+              RawValue: 36045
           RotationOffset:
             X:
               RawValue: 0
